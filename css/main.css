@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    font-family: "FiraCode Nerd Font Mono", sans-serif;
+    font-family: sans-serif;
 }
 
 body a {
@@ -34,6 +34,7 @@ nav ul {
 
 nav li {
     margin: 2% 0;
+    display: block;
     border-bottom: 1px dotted grey;
 }
 
@@ -45,8 +46,28 @@ h2 {
     margin: 3%;
 }
 
+h3 {
+    margin: 4% 0 0 2%;
+}
+
+main img {
+    float: left;
+    width: 20%;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin: 4% 4% 0;
+}
+
+main p {
+    text-indent: 4ch;
+    margin: 4%;
+}
+
 footer {
-    background-color: #3a3a3a
+    background-color: #3a3a3a;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer ul {
@@ -67,8 +88,33 @@ footer p {
     background-color: #1f1f1f;
     text-align: right;
     margin-top: 3%;
-    padding-right: 2%;
     margin-bottom: 0;
+    padding-right: 2%;
+    margin-left: 0;
+}
+
+section {
+    display: grid;
+    gap: 3%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+    border: 1px solid white;
+}
+
+.card p {
+    margin: 3%;
+}
+
+.card img {
+    border-radius: unset;
+    border: none;
+    width: 40%;
+}
+
+.email {
+    margin-bottom: 100px;
 }
 
 @media (min-width: 800px) {
@@ -88,10 +134,50 @@ footer p {
         display: inline;
         text-align: center;
         margin: 0 6%;
-        border: 1px dotted white;
+    }
+
+    h2 {
+        margin-bottom: 2%;
+    }
+
+    main {
+        border: 1px solid cyan;
+        box-shadow: 0 0 10px cyan;
+    }
+
+    main img {
+        width: 10%;
+        float: left;
+        margin: 2%;
+        border-radius: unset;
+        border: 1px solid cyan;
+        box-shadow: 0 0 10px cyan;
+    }
+
+    main p {
+        margin: 3%;
+        border: unset;
+        font-size: 120%;
+    }
+
+    footer {
+        position: unset;
     }
 
     footer p {
         margin-top: 0;
+    }
+
+    .card {
+        border: 1px solid cyan;
+        box-shadow: 0 0 10px cyan;
+    }
+
+    .email {
+        margin-bottom: 3%;
+    }
+
+    .email h3 {
+        margin-top: 5%;
     }
 }
